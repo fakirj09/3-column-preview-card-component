@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+:root {
+  --prim-orange: hsl(31, 77%, 52%);
+  --prim-cyan: hsl(184, 100%, 22%);
+  --prim-dark-cyan: hsl(179, 100%, 13%);
+  --neu-white: hsla(0, 0%, 100%, 0.75);
+  --neu-gray: hsl(0, 0%, 95%);
+
+  --gray: #999;
+  --dark-gray: #555;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 5rem 2rem;
+  margin: 2rem;
+  background-color: var(--neu-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  color: var(--neu-white);
+}
+.header-one {
+  color: white;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.total-grid {
+  display: flex;
+}
+.flex-one,
+.flex-two,
+.flex-three {
+  padding: 2rem;
+  max-width: 278px;
+  height: 450px;
+  background-color: var(--prim-orange);
+}
+.flex-one {
+  border-radius: 7px 0 0 7px;
+}
+.flex-two {
+  background-color: var(--prim-cyan);
+}
+.flex-three {
+  background-color: var(--prim-dark-cyan);
+  border-radius: 0 7px 7px 0;
+}
+img {
+  margin-bottom: 36px;
+}
+h1 {
+  font-family: 'BigShoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--neu-gray);
+  margin-bottom: 1.5rem;
+}
+.para {
+  color: var(--neu-white);
+  font-size: 13.8px;
+  line-height: 1.5rem;
+}
+.learn-more {
+  display: flex;
+  text-decoration: none;
+  position: absolute;
+  border: none;
+  background-color: white;
+  padding: 14px;
+  width: 140px;
+  text-align: center;
+  border-radius: 25px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  bottom: 100px;
+}
+.flex-one button {
+  background-color: var(--neu-gray);
+  color: var(--prim-orange);
+}
+.flex-two button {
+  background-color: var(--neu-gray);
+  color: var(--prim-cyan);
+}
+.flex-three button {
+  background-color: var(--neu-gray);
+  color: var(--prim-dark-cyan);
+}
+.learn-more:hover {
+  background-color: var(--neu-gray);
+  color: var(--prim-dark-cyan);
+}
+button:active {
+  transform: scale(0.9);
+}
+@media only screen and(max-width:844px) {
+  body {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+  main {
+    padding: 50px 0;
+    flex-direction: column;
+  }
+  .flex-one {
+    border-radius: 7px 7px 0 0;
+  }
+  .flex-three {
+    border-radius: 0 0 7px 7px;
+  }
+  .para {
+    font-size: 0.77rem;
+  }
+}
